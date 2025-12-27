@@ -28,17 +28,19 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed) -- Records th
 	end
 
 	if input.KeyCode == Enum.KeyCode.F then
-		
+		print("F Key Pressed")
 		if moved then -- If the block has been moved then it will reset the position and color
 			block.Position = oldPosition
 			block.Color = oldColor
 			block.Material = oldMaterial
 			moved = false
+			print("Block Reset")
 		else -- If the block has not been moved then it will move the block to a new position and color
 			block.Position = Vector3.new(10, 10, 10)
 			block.Color = Color3.fromRGB(102, 255, 0)
 			block.Material = Enum.Material.Neon
 			moved = true
+			print("Block Moved")
 		end
 	end
 
